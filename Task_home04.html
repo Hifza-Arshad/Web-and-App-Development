@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Loan Application</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e6f7e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  width: 60%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 15px;
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+input,
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.name-fields input {
+  width: calc(25% - 15px);
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+</style>
+<body>
+  <div class="form-container">
+    <h1>Business Loan Application</h1>
+    <form>
+      <!-- Personal Information -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="first-name">Name of Applicant</label>
+        <div class="name-fields">
+          <input type="text" id="prefix" placeholder="Prefix">
+          <input type="text" id="first-name" placeholder="First Name" required>
+          <input type="text" id="middle-name" placeholder="Middle Name">
+          <input type="text" id="last-name" placeholder="Last Name">
+        </div>
+        <label for="email">E-mail of Applicant</label>
+        <input type="email" id="email" placeholder="example@example.com" required>
+        <label for="phone-number">Phone Number of Applicant</label>
+        <input type="tel" id="phone-number" placeholder="(000) 000-0000">
+        <label for="mobile-phone">Mobile Phone Number of Applicant</label>
+        <input type="tel" id="mobile-phone" placeholder="(000) 000-0000">
+        <label for="fax-number">Fax Number of Applicant</label>
+        <input type="text" id="fax-number" placeholder="(000) 000-0000">
+      </fieldset>
+
+      <!-- Address -->
+      <fieldset>
+        <legend>Address of Applicant</legend>
+        <label for="street-address">Street Address</label>
+        <input type="text" id="street-address" placeholder="Street Address" required>
+        <label for="street-address-2">Street Address Line 2</label>
+        <input type="text" id="street-address-2" placeholder="Street Address Line 2">
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="City">
+        <label for="state">State/Province</label>
+        <input type="text" id="state" placeholder="State/Province">
+        <label for="postal-code">Postal/Zip Code</label>
+        <input type="text" id="postal-code" placeholder="Postal/Zip Code">
+      </fieldset>
+
+      <!-- Date of Birth -->
+      <fieldset>
+        <legend>Date of Birth of Applicant</legend>
+        <select>
+          <option value="" disabled selected>Select a month</option>
+          <option>January</option>
+          <option>February</option>
+          <option>March</option>
+          <!-- More months here -->
+        </select>
+        <select>
+          <option value="" disabled selected>Select a day</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <!-- More days here -->
+        </select>
+        <select>
+          <option value="" disabled selected>Select a year</option>
+          <option>1980</option>
+          <option>1981</option>
+          <option>1982</option>
+          <!-- More years here -->
+        </select>
+      </fieldset>
+
+      <!-- Application Type -->
+      <fieldset>
+        <legend>Applying as</legend>
+        <input type="radio" id="sole-proprietor" name="applying-as" value="sole-proprietor">
+        <label for="sole-proprietor">Sole Proprietor</label>
+        <input type="radio" id="partnership" name="applying-as" value="partnership">
+        <label for="partnership">Partnership</label>
+        <input type="radio" id="corporation" name="applying-as" value="corporation">
+        <label for="corporation">Corporation</label>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
